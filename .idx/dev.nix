@@ -16,24 +16,24 @@
     "astro-build.astro-vscode"
   ];
   # preview configuration, identical to monospace.json
-idx.previews = {
-    enable = true;
-    previews = [
-      {
-        command = [
-          "npm"
-          "run"
-          "dev"
-          "--"
-          "--port"
-          "$PORT"
-          "--host"
-          "0.0.0.0"
-          "--disable-host-check"
-        ];
-        manager = "web";
-        id = "web";
-      }
-    ];
-  };
+  idx.previews = {
+      enable = true;
+      previews = [
+        {
+          command = [
+            "npm"
+            "run"
+            "dev"
+            "--"
+            "--port"
+            "$PORT"
+            "--host"
+            "0.0.0.0"
+            "--disable-host-check"
+          ];
+          manager = "web";
+          id = "web";
+        }
+      ];
+    };
 }
