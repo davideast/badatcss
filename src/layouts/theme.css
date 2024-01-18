@@ -1,0 +1,18 @@
+:root {
+  /* example theme props integrated w/ normalize */
+  --palette-hue: 270;
+  --palette-hue-rotate-by: 0;
+  --palette-chroma: .05;
+
+  --link: oklch(90% 80% var(--palette-hue));
+  --link-visited: oklch(90% 80% calc(var(--palette-hue) * 1.2));
+
+  --surface-1: var(--color-11);
+	--surface-2: var(--color-12);
+	--surface-3: var(--color-13);
+	--surface-document: var(--color-15);
+	--well-1: var(--color-16);
+	--well-2: black;
+  --text-1: var(--color-1);
+  --text-2: var(--color-5);
+}
