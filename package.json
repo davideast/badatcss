@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "astro": "^4.1.2",
+    "open-props": "^2.0.0-beta.1",
     "typescript": "^5.3.3"
   }
 }
