@@ -1,0 +1,46 @@
+<section>
+  <h2>Hosted By</h2>
+  <ul>
+    <li>
+      <img src="/david-grunge.png" alt="David East on a spray paint background" />
+      <span>David East</span>
+    </li>
+    <li>
+      <img src="/adam-grunge.png" alt="Adam Argyle on a spray paint background" />
+      <span>Adam Argyle</span>
+    </li>
+  </ul>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 72px;
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 56px;
+
+      & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        & img {
+          width: 148px
+        }
+
+        & span {
+          font-size: 1.25rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+</style>
