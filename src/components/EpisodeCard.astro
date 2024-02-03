@@ -1,0 +1,59 @@
+---
+const { episode, number } = Astro.props;
+const { title, date, featuring, channels } = episode;
+---
+<style>
+  .card {
+    width: 100%;
+    border: 1px solid #CCC;
+    padding: 20px 24px;
+    border-radius: 8px;
+
+    & div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+
+      & span {
+        color: #DDD;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.64px;
+      }
+
+      ul {
+        display: flex;
+      }
+    }
+
+    & div:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & div {
+        color: #DDD;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 5rem;
+      }
+    }
+  }
+</style>
+<div class="card">
+  <h4>{title}</h4>
+
+  <div>
+    <span>Featuring</span>
+    <ul>
+      {featuring.map(f => <li>{f}</li>)}
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      {Object.keys(channels).map(c => <li>{c}</li>)}
+    </ul>
+    <div>#{number}</div>
+  </div>
+
+</div>

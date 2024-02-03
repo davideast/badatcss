@@ -1,0 +1,71 @@
+---
+import IconHeading from "./IconHeading.astro";
+import EpisodeCard from "./EpisodeCard.astro";
+
+const episodes = [
+  {
+    title: "What CSS is Jason Lengstorf bad At?",
+    date: new Date("2022-11-17"),
+    featuring: ["david", "adam", "jason"],
+    channels: [
+      {
+        youtube: "https://youtu.be/BYaU3ftTXfQ",
+        spotify: "https://open.spotify.com/episode/5k8sEqKp3mXAWwhepgyjqR",
+        apple:
+          "https://podcasts.apple.com/us/podcast/what-css-is-jason-lengstorf-bad-at/id1702605487?i=1000635425578",
+      },
+    ],
+  },
+  {
+    title: "What CSS is Jason Lengstorf bad At?",
+    date: new Date("2022-11-17"),
+    featuring: ["david", "adam", "jason"],
+    channels: [
+      {
+        youtube: "https://youtu.be/BYaU3ftTXfQ",
+        spotify: "https://open.spotify.com/episode/5k8sEqKp3mXAWwhepgyjqR",
+        apple:
+          "https://podcasts.apple.com/us/podcast/what-css-is-jason-lengstorf-bad-at/id1702605487?i=1000635425578",
+      },
+    ],
+  },
+];
+---
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 104px;
+    place-items: center;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    & li {
+      display: contents;
+    }
+  }
+</style>
+<section>
+  <div>
+    <IconHeading
+      iconUrl="/microphone.png"
+      iconAlt="A microphone icon"
+      heading="Recent Episodes"
+    />
+  </div>
+  <ul>
+    {
+      episodes.map((episode, index) => (
+        <li>
+          <EpisodeCard episode={episode} number={index + 1} />
+        </li>
+      ))
+    }
+  </ul>
+</section>

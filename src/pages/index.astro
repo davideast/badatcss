@@ -1,28 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import HostedBy from '../components/HostedBy.astro';
-
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import HostedBy from "../components/HostedBy.astro";
+import Swoop from "../components/Swoop.astro";
+import RecentEpisodes from "../components/RecentEpisodes.astro";
 ---
 
 <Layout title="Bad at CSS">
 	<Header />
 	<Hero />
 	<HostedBy />
+	<Swoop />
+	<RecentEpisodes />
 </Layout>
 
 <style>
-
 	header {
 		display: flex;
 		justify-content: flex-start;
 	}
 
-/* 
+	/* 
 	main {
 		--_gap: var(--size-9)
 	} */
-
 </style>
