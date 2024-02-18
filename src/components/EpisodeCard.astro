@@ -1,6 +1,7 @@
 ---
 const { episode, number } = Astro.props;
 const { title, date, featuring, channels } = episode;
+import people from '../data/people';
 ---
 <style>
   .card {
@@ -8,6 +9,8 @@ const { title, date, featuring, channels } = episode;
     border: 1px solid #CCC;
     padding: 20px 24px;
     border-radius: 8px;
+    display: grid;
+    gap: 24px;
 
     & div:nth-child(2) {
       display: flex;
@@ -45,7 +48,7 @@ const { title, date, featuring, channels } = episode;
   <div>
     <span>Featuring</span>
     <ul>
-      {featuring.map(f => <li>{f}</li>)}
+      {featuring.map(f => <li><img height="32" width="32" src={people[f].photoUrl} alt={people[f].name} /></li>)}
     </ul>
   </div>
 
