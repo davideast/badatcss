@@ -7,6 +7,7 @@
     # pkgs.python3
     # pkgs.go
     pkgs.nodejs_20
+    pkgs.firebase-tools
   ];
   # Sets environment variables in the workspace
   env = {};
