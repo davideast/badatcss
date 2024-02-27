@@ -1,0 +1,35 @@
+---
+const { heading, subtitle } = Astro.props;
+---
+<section>
+  {heading ? <div><h2>{heading}</h2></div>: null}
+  <p>{subtitle}</p>
+  <div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  section {
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-column: full;
+    gap: 32px;
+
+    & > div:has(h2) {
+      display: flex;
+      justify-content: center;
+    }
+
+    & p {
+      color: var(--text-2);
+			font-size: clamp(1.25rem, 3vw + 1rem, 2rem);
+      text-align: center;
+      line-height: 1.5;
+		}
+
+		& * {
+			grid-column: center;
+		}
+	}
+</style>

@@ -1,0 +1,55 @@
+<ul class="listen-on__list">
+  <li>
+    <a href="https://feeds.zencastr.com/f/f_HJY_T3.rss">
+      <img src="/rss.svg" alt="RSS" />
+      <span>RSS</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp">
+      <img src="/spotify.svg" alt="Spotify" />
+      <span>Spotify</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/@badatcsspod">
+      <img src="/watch-on-yt.svg" alt="YouTube" />
+    </a>
+  </li>
+  <li>
+    <a href="https://podcasts.apple.com/us/podcast/bad-at-css/id1702605487">
+      <img src="/apple-podcasts.svg" alt="Apple Podcasts" />
+    </a>
+  </li>
+</ul>
+
+<style>
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    & li {
+      font-size: 1.125rem;
+      font-weight: bold;
+      background-color: var(--surface-3);
+      padding: 4px 16px;
+      border-radius: 24px;
+
+      /* Don't style the YT and Apple Podcast SVGs*/
+      &:nth-child(3),
+      &:nth-child(4) {
+        background: unset;
+        padding: unset;
+      }
+
+      & a {
+        color: var(--text-1);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+</style>
