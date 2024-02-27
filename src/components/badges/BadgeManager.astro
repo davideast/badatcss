@@ -1,0 +1,19 @@
+---
+import SpotifyBadge from './SpotifyBadge.astro';
+const channelMap = new Map([
+  ['youtube', { iconUrl: '/watch-on-yt.svg' }],
+  ['apple', { iconUrl: '/apple-podcasts.svg' }],
+  ['spotify', { iconUrl: '/spotify.svg' }]
+]);
+const { channel, href } = Astro.props;
+---
+
+{channel === 'spotify' ? (
+  <SpotifyBadge
+    {href}
+  />
+) : (
+  <a href={href} style="display: contents;">
+    <img src={channelMap.get(channel)!.iconUrl} alt="YouTube" />
+  </a>  
+)}

@@ -1,0 +1,26 @@
+---
+const { href, src, channel } = Astro.props;
+---
+<div>
+  <a href={href}>        
+    <img src={src} alt={channel} />
+    <span>{channel}</span>
+  </a>
+</div>
+
+<style>
+  div {
+    font-size: 1.125rem;
+    font-weight: bold;
+    background-color: var(--surface-3);
+    padding: 4px 16px;
+    border-radius: 24px;
+
+    & a {
+      color: var(--text-1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+</style>
