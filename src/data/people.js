@@ -1,22 +1,27 @@
+import adam from '../assets/people/adam.webp';
+import david from '../assets/people/david.webp';
+import chris from '../assets/people/chris.webp';
+import jason from '../assets/people/jason.webp';
+
 export default {
   "adam": {
     "name": "adam",
-    "photoUrl": "/people/adam.webp",
+    "photoUrl": adam.src,
     "twitter": "https://twitter.com/argyleink"
   },
   "david": {
     "name": "david",
-    "photoUrl": "/people/david.webp",
+    "photoUrl": david.src,
     "twitter": "https://twitter.com/_davideast"
   },
   "chris": {
     "name": "chris",
-    "photoUrl": "/people/chris.webp",
+    "photoUrl": chris.src,
     "twitter": "https://twitter.com/chriscoyier"
   },
   "jason": {
     "name": "jason",
-    "photoUrl": "/people/jason.webp",
+    "photoUrl": jason.src,
     "twitter": "https://twitter.com/jlengstorf"
   },
   "dave-rupert": {

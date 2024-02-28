@@ -1,6 +1,7 @@
 ---
 import IconHeading from "./IconHeading.astro";
 import EpisodeCard from "./EpisodeCard.astro";
+import mic from '../assets/microphone.webp';
 
 const episodes = [
 {
@@ -79,7 +80,7 @@ const episodes = [
 <section>
   <div>
     <IconHeading
-      iconUrl="/microphone.webp"
+      iconUrl={mic.src}
       iconAlt="A microphone icon"
       heading="Recent Episodes"
       height={71}

@@ -1,10 +1,15 @@
 ---
 import ChannelBadge from './ChannelBadge.astro';
+import rss from '../../assets/rss.svg';
+import spotify from '../../assets/spotify.svg';
+import yt from '../../assets/watch-on-yt.svg';
+import apple from '../../assets/apple-podcasts.svg';
+
 const channelMap = new Map([
-  ['RSS', { iconUrl: '/rss.svg', href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss', iconHeight: '32', iconWidth: '32' }],
-  ['YouTube', { iconUrl: '/watch-on-yt.svg', iconHeight: '46', iconWidth: '140'  }],
-  ['Apple', { iconUrl: '/apple-podcasts.svg', iconHeight: '41', iconWidth: '130' }],
-  ['Spotify', { iconUrl: '/spotify.svg', href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp', iconHeight: '32', iconWidth: '32' }]
+  ['RSS', { iconUrl: rss.src, href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss', iconHeight: '32', iconWidth: '32' }],
+  ['YouTube', { iconUrl: yt.src, iconHeight: '46', iconWidth: '140'  }],
+  ['Apple', { iconUrl: apple.src, iconHeight: '41', iconWidth: '130' }],
+  ['Spotify', { iconUrl: spotify.src, href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp', iconHeight: '32', iconWidth: '32' }]
 ]);
 const { channel, href } = Astro.props;
 ---
