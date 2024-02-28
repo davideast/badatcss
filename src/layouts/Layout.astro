@@ -10,6 +10,7 @@ interface Props {
 const { title } = Astro.props;
 import grunge from '../assets/paint-grunge-60.webp'
 import logo from '../assets/bad-logo-hero.svg';
+import twCard from '../assets/twitter-card.png';
 const grungeSrc = `url(${grunge.src})`;
 ---
 
@@ -17,7 +18,7 @@ const grungeSrc = `url(${grunge.src})`;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Bad at CSS Podcast" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="theme-color" content="Canvas" />
     <meta name="color-scheme" content="dark light" />
@@ -29,6 +30,14 @@ const grungeSrc = `url(${grunge.src})`;
 		<link rel="preload" fetchpriority="high" as="image" href={logo.src} type="image/svg">
 		<script src="../click-card.js"></script>
 		<script defer data-domain="badatcss.com" src="https://plausible.io/js/script.js"></script>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@_davideast" />
+		<meta name="twitter:title" content="Bad at CSS" />
+		<meta name="og:title" content="Bad at CSS" />
+		<meta name="twitter:description" content="A podcast for those who are bad at CSS" />
+		<meta name="og:description" content="A podcast for those who are bad at CSS" />
+		<meta name="twitter:image" content={twCard.src} />
+		<meta name="og:image" content={twCard.src} />
 		<title>{title}</title>
 	</head>
 	<body>
