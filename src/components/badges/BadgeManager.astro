@@ -9,7 +9,7 @@ const channelMap = new Map([
 const { channel, href } = Astro.props;
 ---
 
-{channel !== ('Apple' || 'YouTube') ? (
+{channel === 'RSS' || channel === 'Spotify' ? (
   <ChannelBadge
     {channel}
     href={href ?? channelMap.get(channel)!.href}
@@ -17,6 +17,6 @@ const { channel, href } = Astro.props;
   />
 ) : (
   <a href={href}>
-    <img src={channelMap.get(channel)!.iconUrl} alt="YouTube" />
+    <img src={channelMap.get(channel)!.iconUrl} alt={`Icon for ${channel}`} />
   </a>  
 )}
