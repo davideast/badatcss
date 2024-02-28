@@ -7,8 +7,8 @@ import apple from '../../assets/apple-podcasts.svg';
 
 const channelMap = new Map([
   ['RSS', { iconUrl: rss.src, href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss', iconHeight: '32', iconWidth: '32' }],
-  ['YouTube', { iconUrl: yt.src, iconHeight: '46', iconWidth: '140'  }],
-  ['Apple', { iconUrl: apple.src, iconHeight: '41', iconWidth: '130' }],
+  ['YouTube', { iconUrl: yt.src, iconHeight: '46', iconWidth: '140', href: 'https://www.youtube.com/@badatcsspod'  }],
+  ['Apple', { iconUrl: apple.src, iconHeight: '41', iconWidth: '130', href: 'https://podcasts.apple.com/us/podcast/bad-at-css/id1702605487' }],
   ['Spotify', { iconUrl: spotify.src, href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp', iconHeight: '32', iconWidth: '32' }]
 ]);
 const { channel, href } = Astro.props;
@@ -23,7 +23,7 @@ const { channel, href } = Astro.props;
     width={channelMap.get(channel)!.iconWidth}
   />
 ) : (
-  <a href={href}>
+  <a href={href ?? channelMap.get(channel)!.href}>
     <img height={channelMap.get(channel)!.iconHeight} width={channelMap.get(channel)!.iconWidth} src={channelMap.get(channel)!.iconUrl} alt={`Icon for ${channel}`} />
   </a>  
 )}

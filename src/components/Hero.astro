@@ -6,7 +6,7 @@ import logo from "../assets/bad-logo-hero.svg";
 
 <section>
   <div>
-    <img src={logo.src} width="374" height="253" />
+    <img src={logo.src} width="374" height="253" alt="Bad @ CSS logo" fetchpriority="high" />
   </div>
 </section>
 
@@ -23,6 +23,14 @@ import logo from "../assets/bad-logo-hero.svg";
     grid-column: full;
     place-items: center;
     padding-block: 2.5vh;
+
+    > img {
+      grid-column: 1 / -1;
+    }
+
+    & div, img {
+      grid-row: 2;
+    }
 
     & div {
       display: grid;
