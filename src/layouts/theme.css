@@ -19,6 +19,7 @@
 
   --font-display: flood-std, sans-serif;
   --font-body: skolar-sans-latin, sans-serif;
+  --link: white;
 }
 
 * {
@@ -38,4 +39,8 @@ ul, ol, li {
 
 h2, h3 {
   font-family: var(--font-display);
+}
+
+a:visited {
+  all: unset;
 }

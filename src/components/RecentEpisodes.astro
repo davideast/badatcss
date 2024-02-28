@@ -6,7 +6,7 @@ const episodes = [
 {
     title: "What CSS is Jason Lengstorf bad at?",
     date: new Date("2023-11-17"),
-    featuring: ["david", "adam", "jason"],
+    featuring: ["jason", "adam", "david"],
     channels: {
       youtube: "https://youtu.be/BYaU3ftTXfQ",
       spotify: "https://open.spotify.com/episode/5k8sEqKp3mXAWwhepgyjqR",
@@ -79,7 +79,7 @@ const episodes = [
 <section>
   <div>
     <IconHeading
-      iconUrl="/microphone.png"
+      iconUrl="/microphone.webp"
       iconAlt="A microphone icon"
       heading="Recent Episodes"
     />
@@ -88,7 +88,9 @@ const episodes = [
     {
       episodes.map((episode, index) => (
         <li>
-          <EpisodeCard episode={episode} number={index + 1} />
+          <click-card>
+            <EpisodeCard episode={episode} number={index + 1} />
+          </click-card>
         </li>
       ))
     }

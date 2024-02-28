@@ -12,6 +12,11 @@ import BadgeManager from './badges/BadgeManager.astro';
     border-radius: 8px;
     display: grid;
     gap: 24px;
+    transition: scale 200ms var(--ease-elastic-in-out-1);
+
+    &:hover {
+      scale: 1.025;
+    }
 
     & div:nth-child(2) {
       display: flex;
@@ -65,7 +70,9 @@ import BadgeManager from './badges/BadgeManager.astro';
   }
 </style>
 <section>
-  <h4>{title}</h4>
+  <h4>
+    <a href={channels.youtube} rel="noopener" target="_blank">{title}</a>
+  </h4>
 
   <div>
     <span>Featuring</span>
