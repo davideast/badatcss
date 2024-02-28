@@ -1,19 +1,22 @@
 ---
-import SpotifyBadge from './SpotifyBadge.astro';
+import ChannelBadge from './ChannelBadge.astro';
 const channelMap = new Map([
-  ['youtube', { iconUrl: '/watch-on-yt.svg' }],
-  ['apple', { iconUrl: '/apple-podcasts.svg' }],
-  ['spotify', { iconUrl: '/spotify.svg' }]
+  ['RSS', { iconUrl: '/rss.svg', href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss' }],
+  ['YouTube', { iconUrl: '/watch-on-yt.svg' }],
+  ['Apple', { iconUrl: '/apple-podcasts.svg' }],
+  ['Spotify', { iconUrl: '/spotify.svg', href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp' }]
 ]);
 const { channel, href } = Astro.props;
 ---
 
-{channel === 'spotify' ? (
-  <SpotifyBadge
-    {href}
+{channel !== ('Apple' || 'YouTube') ? (
+  <ChannelBadge
+    {channel}
+    href={href ?? channelMap.get(channel)!.href}
+    src={channelMap.get(channel)!.iconUrl}
   />
 ) : (
-  <a href={href} style="display: contents;">
+  <a href={href}>
     <img src={channelMap.get(channel)!.iconUrl} alt="YouTube" />
   </a>  
 )}

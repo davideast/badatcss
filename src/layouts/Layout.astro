@@ -27,7 +27,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<main class="bad-grid padding">
+		<main>
 			<slot />
 		</main>
 	</body>
@@ -44,9 +44,7 @@ const { title } = Astro.props;
     background-position: center center;
 		background-position-y: 20px;
 		background-repeat: no-repeat;
-	}
-
-	.bad-grid {
+		padding: 16px;
 		display: grid;
 		grid-template-columns: 
 		[full-start] 
@@ -55,10 +53,10 @@ const { title } = Astro.props;
 			1fr
 		[full-end];
 		row-gap: 144px;
-	}
 
-	.bad-grid > * {
-		grid-column: center;
+		& > * {
+			grid-column: center;
+		}
 	}
 
 	body {
