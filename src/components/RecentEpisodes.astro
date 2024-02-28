@@ -92,7 +92,7 @@ const episodes = [
       episodes.map((episode, index) => (
         <li>
           <click-card>
-            <EpisodeCard episode={episode} number={index + 1} />
+            <EpisodeCard episode={episode} number={episodes.length - index} />
           </click-card>
         </li>
       ))
