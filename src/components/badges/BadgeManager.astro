@@ -1,10 +1,10 @@
 ---
 import ChannelBadge from './ChannelBadge.astro';
 const channelMap = new Map([
-  ['RSS', { iconUrl: '/rss.svg', href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss' }],
-  ['YouTube', { iconUrl: '/watch-on-yt.svg' }],
-  ['Apple', { iconUrl: '/apple-podcasts.svg' }],
-  ['Spotify', { iconUrl: '/spotify.svg', href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp' }]
+  ['RSS', { iconUrl: '/rss.svg', href: 'https://feeds.zencastr.com/f/f_HJY_T3.rss', iconHeight: '32', iconWidth: '32' }],
+  ['YouTube', { iconUrl: '/watch-on-yt.svg', iconHeight: '46', iconWidth: '140'  }],
+  ['Apple', { iconUrl: '/apple-podcasts.svg', iconHeight: '41', iconWidth: '130' }],
+  ['Spotify', { iconUrl: '/spotify.svg', href: 'https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp', iconHeight: '32', iconWidth: '32' }]
 ]);
 const { channel, href } = Astro.props;
 ---
@@ -14,9 +14,11 @@ const { channel, href } = Astro.props;
     {channel}
     href={href ?? channelMap.get(channel)!.href}
     src={channelMap.get(channel)!.iconUrl}
+    height={channelMap.get(channel)!.iconHeight}
+    width={channelMap.get(channel)!.iconWidth}
   />
 ) : (
   <a href={href}>
-    <img src={channelMap.get(channel)!.iconUrl} alt={`Icon for ${channel}`} />
+    <img height={channelMap.get(channel)!.iconHeight} width={channelMap.get(channel)!.iconWidth} src={channelMap.get(channel)!.iconUrl} alt={`Icon for ${channel}`} />
   </a>  
 )}

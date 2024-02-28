@@ -1,5 +1,5 @@
 ---
-let { iconUrl, iconAlt, heading } = Astro.props
+let { iconUrl, iconAlt, heading, height, width } = Astro.props
 ---
 <style>
   div {
@@ -14,6 +14,6 @@ let { iconUrl, iconAlt, heading } = Astro.props
   }
 </style>
 <div>
-  <img width="48" src={iconUrl} alt={iconAlt} />
+  <img {width} {height} src={iconUrl} alt={iconAlt} />
   <h2>{heading}</h2>
 </div>

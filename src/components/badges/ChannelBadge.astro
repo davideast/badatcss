@@ -1,9 +1,9 @@
 ---
-const { href, src, channel } = Astro.props;
+const { href, src, channel, height, width } = Astro.props;
 ---
 <div>
   <a href={href}>        
-    <img src={src} alt={`Icon for ${channel}`} />
+    <img src={src} alt={`Icon for ${channel}`} {height} {width} />
     <span>{channel}</span>
   </a>
 </div>

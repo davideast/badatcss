@@ -27,9 +27,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<main>
+		<article>
 			<slot />
-		</main>
+		</article>
 	</body>
 </html>
 <style is:global>
@@ -39,7 +39,7 @@ const { title } = Astro.props;
 		display: contents;
 	}
 
-	main {
+	article {
 		background-image: url(/paint-grunge-60.webp);
     background-position: center center;
 		background-position-y: 20px;
