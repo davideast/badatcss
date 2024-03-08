@@ -4,7 +4,17 @@ import EpisodeCard from "./EpisodeCard.astro";
 import mic from '../assets/microphone.webp';
 
 const episodes = [
-{
+  {
+    title: "2024 CSS Resolutions",
+    date: new Date("2024-03-08"),
+    featuring: ["adam", "david"],
+    channels: {
+      YouTube: "https://www.youtube.com/watch?v=dDwgOwwb9kc",
+      Spotify: "https://open.spotify.com/show/5vtb28Q1QNzgv07v9LzpGp",
+      Apple: "https://podcasts.apple.com/us/podcast/2024-css-resolutions/id1702605487?i=1000648497322",
+    },
+  },
+  {
     title: "What CSS is Jason Lengstorf bad at?",
     date: new Date("2023-11-17"),
     featuring: ["jason", "adam", "david"],
