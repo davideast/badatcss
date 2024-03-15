@@ -2,6 +2,7 @@ import adam from '../assets/people/adam.webp';
 import david from '../assets/people/david.webp';
 import chris from '../assets/people/chris.webp';
 import jason from '../assets/people/jason.webp';
+import dave from '../assets/people/dave.webp';
 
 export default {
   "adam": {
@@ -24,9 +25,9 @@ export default {
     "photoUrl": jason.src,
     "twitter": "https://twitter.com/jlengstorf"
   },
-  "dave-rupert": {
+  "dave": {
     "name": "dave-rupert",
-    "photoUrl": "/people/dave-rupert.webp",
+    "photoUrl": dave.src,
     "twitter": "https://twitter.com/davatron5000"
   }
 }
