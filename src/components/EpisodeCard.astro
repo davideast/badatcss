@@ -5,14 +5,30 @@ import people from '../data/people';
 import BadgeManager from './badges/BadgeManager.astro';
 ---
 <style>
+  @keyframes episode--leaveview { 
+    from {
+      scale: .95;
+      translate: 0 20px;
+    }
+  }
+
   section {
     width: 100%;
+    background: #000;
     border: 1px solid #CCC;
     padding: 20px 24px;
     border-radius: 8px;
     display: grid;
     gap: 24px;
-    transition: scale 200ms var(--ease-elastic-in-out-1);
+    transition: scale 1s var(--ease-spring-4);
+
+    @media (prefers-reduced-motion: no-preference) {
+      @supports (animation-timeline: scroll()) {
+        animation: episode--leaveview linear both;
+        animation-timeline: view();
+        animation-range: 5vh 15vh;
+      }
+    }
 
     & > a:first-of-type {
       font-weight: 800;
