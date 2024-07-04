@@ -17,6 +17,13 @@ import logo from "../assets/bad-logo-hero.svg";
 </Section>
 
 <style>
+  @keyframes greeting--leaveview { 
+    to {
+      opacity: .25;
+      translate: 0 5vh;
+    }
+  }
+
   section {
     display: grid;
     grid-template-columns: subgrid;
@@ -46,6 +53,14 @@ import logo from "../assets/bad-logo-hero.svg";
         width: 65%;
       }
 		}
+
+    @media (prefers-reduced-motion: no-preference) {
+      @supports (animation-timeline: scroll()) {
+        animation: greeting--leaveview linear both;
+        animation-timeline: scroll();
+        animation-range: 0 25vh;
+      }
+    }
 
 	}
 </style>
