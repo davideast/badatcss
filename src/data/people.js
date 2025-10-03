@@ -5,6 +5,8 @@ import jason from '../assets/people/jason.webp';
 import dave from '../assets/people/dave.webp';
 import ericMeyer from '../assets/people/eric-meyer.png';
 import estelleWeyl from '../assets/people/estelle-weyl.png';
+import matthias from '../assets/people/matthias.png';
+import lane from '../assets/people/lane.png';
 
 export default {
   "adam": {
@@ -41,5 +43,15 @@ export default {
     "name": "estelle-weyl",
     "photoUrl": estelleWeyl.src,
     "twitter": "https://estelle.github.io/"
+  },
+  "matthias": {
+    "name": "matthias",
+    "photoUrl": matthias.src,
+    "twitter": "https://matthiasott.com/"
+  },
+  "lane": {
+    "name": "lane",
+    "photoUrl": lane.src,
+    "twitter": "https://x.com/wagslane"
   }
 }
